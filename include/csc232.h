@@ -18,7 +18,7 @@
 #define TRUE 1
 #define EXECUTE_BLOCK FALSE
 
-#define FINISHED_PART_1 FALSE
+#define FINISHED_PART_1 TRUE
 #define FINISHED_PART_2 FALSE
 #define FINISHED_PART_3 FALSE
 
@@ -61,8 +61,14 @@ using std::setw;
 namespace csc232
 {
     // Add any user-defined functions prescribed in your assignment below
-    // TODO: 1.1 Declare the Shape interface below
+    
+    class Shape {
+        public:
+            virtual double area() const = 0;
+            virtual double perimeter() const = 0;
 
+            virtual ~Shape() = default;
+    };
     // TODO: 2.1 Provide an inline definition of the Square class below
 
     // TODO: 3.1 Provide an inline definition of the Circle class below
