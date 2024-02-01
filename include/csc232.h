@@ -19,7 +19,7 @@
 #define EXECUTE_BLOCK FALSE
 
 #define FINISHED_PART_1 TRUE
-#define FINISHED_PART_2 FALSE
+#define FINISHED_PART_2 TRUE
 #define FINISHED_PART_3 FALSE
 
 #include <algorithm>
@@ -61,7 +61,7 @@ using std::setw;
 namespace csc232
 {
     // Add any user-defined functions prescribed in your assignment below
-    
+
     class Shape {
         public:
             virtual double area() const = 0;
@@ -69,9 +69,21 @@ namespace csc232
 
             virtual ~Shape() = default;
     };
-    // TODO: 2.1 Provide an inline definition of the Square class below
+
+    class Square : public Shape {
+        public:
+            double area() const override {
+                return side * side;
+            }
+            double perimeter() const override {
+                return 4 * side;
+            }
+        private:
+            double side = 1;
+    };
 
     // TODO: 3.1 Provide an inline definition of the Circle class below
+
 
     // DO NOT Modify anything below this line
 } // namespace csc232
